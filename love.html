@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Love Calculator</title>
+<link rel="stylesheet" href="love.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+<header>
+  <h2>Love Calculator</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="#">Crush</a></li>
+      <li><a href="#">Love</a></li>
+      <li><a href="#">Enemy</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <h1>Welcome to this great invention of Miss Love</h1>
+    <p>We all know that a name can tell a lot about a person. <br>
+         Names are not randomly chosen: they all have a meaning. <br>
+          Miss Love knew this so she made another great invention just for the lonely you!</p>
+   
+    <p>To find out what the chances for you and your dream partner are, just fill in both full names (both first and last name) in the two text boxes below, and press Calculate.</p>
+
+    <div>
+        <form method="get" action="javascript:void (0);" onsubmit="loveActivity()" name="lf" class="form" id="loveform">
+            <div class="row row--justify-content-between">
+              <div class="form-group">
+                <label for="name1"></label>
+                <input type="text" name="name1" id="name1" value="" size="25" autofocus="" placeholder="Full name" required="">
+              </div>
+              <div class="form-group">
+                <label for="name2"></label>
+                <input type="text" name="name2" id="name2" value="" size="25" placeholder="Full name" required="">
+              </div>
+            </div>
+            <div class="row row--justify-content-center">
+              <div class="form-group form-group--color">
+                <button class="btn btn--primary" id="Calculate-btn" type="submit" id="loveResult"><strong>Calculate love</strong></button>
+                <button type="reset" id="resetButton" onclick="formreset()">Make another calculation</button>
+            </div>
+            </div>
+          </form>
+    </div>
+</article>
+</section>
+<div id="loveResult"></div>
+<div id="result"></div>
+<script>
+    function loveActivity () {
+         var love_score = Math.random() *100;
+            love_score = Math.floor(love_score) + 1;
+            
+            document.getElementById ("result").innerText = "Your love is " + love_score + "%";
+
+    
+     
+        if (love_score > 80) {
+        document.getElementById("result").textContent =
+            "Your love score is " + love_score + "%." + " You are a good match!";
+        } else if (love_score > 40 && love_score <= 80) {
+            document.getElementById("result").textContent =
+            "Your love is " + love_score + "%." + " You are both sweet but this is not the right time ";
+        }  else if (love_score <= 30) {
+            document.getElementById("result").textContent ="Your love is " + love_score + "%." + " You both have other priorities";
+        } else {
+            document.getElementById("result").textContent = 
+            "Your love score is " + love_score + "% " + " I think you are good to be friends not lovers.";
+        }
+        document.getElementById("loveform").reset();
+    }
+    function resetForm() {
+    document.getElementById("loveform").reset();
+     document.getElementById("loveResult").textContent = "";
+    document.getElementById("result").textContent = "";
+}
+
+</script>
+
+
+</body>
+</html>
+

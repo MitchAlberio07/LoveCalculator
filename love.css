@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+    background-color:#F8F0E5;
+  }
+  
+  body {
+    font-family:'Times New Roman', Times, serif;
+  }
+  
+  /* Style the header */
+  header {
+    margin:0px;
+    padding: 0px;
+    text-align: center;
+    font-size: 35px;
+    color: rgb(205, 113, 113);
+  }
+  
+  /* Create two columns/boxes that floats next to each other */
+  nav {
+    float: left;
+    width: 10%;
+    height: 750px; /* only for demonstration, should be removed */
+    background: #F8F0E5;
+    padding: 20px;
+  }
+  
+  /* Style the list inside the menu */
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  article {
+    margin-top:10px;
+    float: left;
+    padding:0px;
+    width: 90%;
+    background-color: #F8F0E5;
+     height: 300px; /* only for demonstration, should be removed */
+  }
+  
+  /* Clear floats after the columns */
+  section::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .form {
+     padding: 55px 30px 30px;
+    position: relative;
+    margin-top: 50px;
+}
+
+  form {
+    display: block;
+    margin-top: 0em;
+    
+    background-image: url("https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExamk5MTRxaXJybThpM21idDI1aWVlMnFtZTdqM3lkb2ZtcjdhaXQ5ayZlcD12MV9naWZzX3NlYXJjaCZjdD1z/IYFjaRidMtNnYNIV3t/giphy.gif");
+   
+}
+.form .form-group {
+    display: block;
+    text-align: center;
+    margin: 20px 20px;
+}
+form input {
+    border-radius: 30px 30px;
+    height: 60px;
+    font-size: 1rem;
+    text-align: center;
+    -webkit-box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.15);
+    border-style: none;
+    z-index: 1;
+    line-height: 23px;
+    outline: none !important;
+    width: 100%;
+}
+btn {
+    color: white;
+    font-weight: 600;
+    -webkit-box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.15);
+    height: 60px;
+    padding: 0 30px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    display: inline-block;
+    border-radius: 30px;
+    font-size: 1.15789rem;
+    text-align: center;
+    text-decoration: none;
+    line-height: 60px;
+    border: none;
+}
+button {
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    margin: 0em;
+    padding-block: 1px;
+    padding-inline: 6px;
+    border-radius:10px;
+    border-color:aliceblue;
+    width: 50%;
+    height:60px;
+    color:#900C3F;
+}
+#result {
+    text-align:center;
+    width:90%;
+    font-size:large;
+    font-family:serif;
+    color:#900C3F;
+    height:50px;
+    padding:50px;
+
+}
+  /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+  @media (max-width: 600px) {
+    nav, article {
+      width: 100%;
+      height: auto;
+    }
+  }
